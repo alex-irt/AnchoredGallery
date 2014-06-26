@@ -32,3 +32,6 @@ Post a full width image styled correctly using this tag:
 
 -> Comments
 Comments aren't supported yet but I'll be looking into it.
+
+-> Search
+Searching is not yet supported, I'm looking for a good spot for the search field
