@@ -29,3 +29,6 @@ Image max height:
 Post a full width image styled correctly using this tag:
 
 [image]image link[/image]
+
+-> Comments
+Comments aren't supported yet but I'll be looking into it.
