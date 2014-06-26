@@ -1,5 +1,5 @@
-Theme name:    Default
-Description:   This is the default, shiny theme for Anchor CMS.
-Author name:   Visual Idiot
-Author site:   http://visualidiot.com
-License:       http://licence.visualidiot.com
+Theme name:    Anchored Gallery
+Description:   A photoblogging theme for anchor.
+Author name:   Alex Stavrinou
+Author site:   http://alexstv.com
+License:       
