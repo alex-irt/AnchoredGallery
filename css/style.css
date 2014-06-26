@@ -225,6 +225,12 @@ line-height: 120%;
 			background: #3c6eb7;
 		}
 		
+		.fiftyfifty{
+		float:left;
+			width:50%;
+			padding-bottom:20px;
+		}
+		
 .commentbox{
 	padding:20px;
 	
