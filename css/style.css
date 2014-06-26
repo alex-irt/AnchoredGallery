@@ -124,9 +124,12 @@ section{
 
 .centerimg{
 	width:480px;
-	margin:0px auto;
+	margin:0px 25%;
 	overflow:auto;
+	display:block;
 	padding:10px;
+	height:auto;
+	float:left;
 }
 
 

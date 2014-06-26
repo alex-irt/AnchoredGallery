@@ -1,5 +1,7 @@
 <?php theme_include('header'); ?>
 
+<?php $showTitles=true ?>
+
 <?php 
 $in= article_markdown();
 $out = preg_replace_callback(
@@ -55,7 +57,7 @@ $out = preg_replace_callback(
     function($m) {
         static $id = 0;
         $id++;
-        return "</bodytext> </div> </div> <div class=\"centerimg\"><img src=".$m[1]." /></div><div id=\"filler\"> <div class=\"description\"> <bodytext>";
+        return "</bodytext> </div> </div> <div style=\"width:100%;float:left;\"><div class=\"centerimg\"><img src=".$m[1]." /></div></div><div id=\"filler\"> <div class=\"description\"> <bodytext>";
     },
     $in);
 	?>
@@ -63,7 +65,16 @@ $out = preg_replace_callback(
 <div class="bg2">
 	<article class="wrapper" >
 <div class="post">
-				
+				<?php if($showTitles): ?>
+					<div id="filler">
+							<div class="description">
+								<bodytext>
+									<h1><?php echo article_title(); ?></h1>
+								</bodytext>
+							</div>
+						</div>
+						<section class="yspace" ></section>
+					<?php endif; ?>
 					<?php if(article_custom_field('image', '')!=""): ?>
 						<img src="<?php echo article_custom_field('image', ''); ?>" />
 					<?php else: ?>

@@ -1,5 +1,7 @@
 <?php theme_include('header'); ?>
 
+<?php $showTitles=true ?>
+
 	<?php if(has_posts()): ?>
 	
 	<div class="bg2">
@@ -13,10 +15,19 @@
 				<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>">
 				<div class="post">
 				
+					<?php if($showTitles): ?>
+					<div id="filler">
+							<div class="description">
+								<bodytext>
+									<h1><?php echo article_title(); ?></h1>
+								</bodytext>
+							</div>
+						</div>
+						<section class="yspace" ></section>
+					<?php endif; ?>
+					
 					<?php if(article_custom_field('image', '')!=""): ?>
 						<img src="<?php echo article_custom_field('image', ''); ?>" />
-					<?php else: ?>
-						<?php echo article_html(); ?>
 					<?php endif; ?>
 					
 					<?php if(article_description() !=""): ?>
@@ -54,10 +65,19 @@
 			<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>">
 				<div class="post">
 				
+					<?php if($showTitles): ?>
+					<div id="filler">
+							<div class="description">
+								<bodytext>
+									<h1><?php echo article_title(); ?></h1>
+								</bodytext>
+							</div>
+						</div>
+						<section class="yspace" ></section>
+					<?php endif; ?>
+				
 					<?php if(article_custom_field('image', '')!=""): ?>
 						<img src="<?php echo article_custom_field('image', ''); ?>" />
-					<?php else: ?>
-						<?php echo article_html(); ?>
 					<?php endif; ?>
 					
 					<?php if(article_description() !=""): ?>
