@@ -12,6 +12,54 @@ $out = preg_replace_callback(
     $in);
 	?>
 
+	<?php 
+$in= $out;
+$out = preg_replace_callback(
+    "(\[img\](.*?)\[/img\])is",
+    function($m) {
+        static $id = 0;
+        $id++;
+        return "<img src=".$m[1]." style=\"width:50%;padding:10px;\"/>";
+    },
+    $in);
+	?>
+	
+	<?php 
+$in= $out;
+$out = preg_replace_callback(
+    "(\[icon\](.*?)\[/icon\])is",
+    function($m) {
+        static $id = 0;
+        $id++;
+        return "<img src=".$m[1]." style=\"width:25%;padding:10px;\"/>";
+    },
+    $in);
+	?>
+	
+	<?php 
+$in= $out;
+$out = preg_replace_callback(
+    "(\[images\](.*?)\[/images\])is",
+    function($m) {
+        static $id = 0;
+        $id++;
+        return "</bodytext> </div> </div> ".$m[1]."<div id=\"filler\"> <div class=\"description\"> <bodytext>";
+    },
+    $in);
+	?>
+	
+	<?php 
+$in= $out;
+$out = preg_replace_callback(
+    "(\[centerimg\](.*?)\[/centerimg\])is",
+    function($m) {
+        static $id = 0;
+        $id++;
+        return "</bodytext> </div> </div> <div class=\"centerimg\"><img src=".$m[1]." /></div><div id=\"filler\"> <div class=\"description\"> <bodytext>";
+    },
+    $in);
+	?>
+	
 <div class="bg2">
 	<article class="wrapper" >
 <div class="post">

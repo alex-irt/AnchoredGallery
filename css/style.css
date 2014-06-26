@@ -104,6 +104,11 @@ section{
 	height:20px;
 }
 
+.padder{
+	padding:20px;
+	float:left;
+	width:auto;
+}
 
 .post{
 	background-color:#fff;
@@ -117,11 +122,14 @@ section{
 	border-radius: 2px;
 }
 
-#filler{
-	float:left;
-	width:100%;
+.centerimg{
+	width:480px;
+	margin:0px auto;
 	overflow:auto;
+	padding:10px;
 }
+
+
 
 .description {
 	float:left;
