@@ -31,7 +31,6 @@ Post a full width image styled correctly using this tag:
 [image]image link[/image]
 
 -> Comments
-Comments aren't supported yet but I'll be looking into it.
-
+Comments are supported and I think they're working right
 -> Search
-Searching is not yet supported, I'm looking for a good spot for the search field
+Searching is supported, search box in the footer
