@@ -64,10 +64,11 @@ background-color:rgba(255, 255, 255, 0.1);
 	transition: all 0.1s;
 	width:160px;
 	text-align:center;
+	overflow:visible;
 }
 .page:hover{
 box-shadow: 0 0 30px 0px #111;
-background-color:rgba(255, 255, 255, 0.1);
+background-color:rgba(255, 255, 255, 0.2);
 }
 
 #wrap{

@@ -40,6 +40,9 @@
     		<!--  Custom Javascript -->
     		<script><?php echo article_js(); ?></script>
 		<?php endif; ?>
+	
+	
+	
 	</head>
 	
 	
@@ -62,12 +65,21 @@
 			<?php if(total_categories()!=1): 
 			$n+=total_categories();
 			endif;
+			$width = 100/$n;
+			
 			?>
+			
+			<?php $url =  $_SERVER['REQUEST_URI'];?>
 		
-			<div class="pagewrapper" style="width:<?php echo ($n *160); ?>px">
+			<div class="pagewrapper" style="width:100%">
 				<?php while(menu_items()): ?>
+				
 					<a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
-						<div class="page">
+						<?php if($url!=menu_url()): ?>
+						<div class="page" style="width:<?php echo $width ?>%">
+					<?php else: ?>
+						<div class="page" style="width:<?php echo $width ?>%; background-color:rgba(255, 255, 255, 0.09);">
+					<?php endif; ?>
 								<stamptext><?php echo menu_name(); ?></stamptext>
 						</div>
 					</a>
@@ -76,7 +88,12 @@
 				<?php if(total_categories()!=1): ?>
 					<?php while(categories()): ?>
 					<a href="<?php echo category_url(); ?>" title="<?php echo category_title(); ?>">
-						<div class="page">
+					
+					<?php if($url!=category_url()): ?>
+						<div class="page" style="width:<?php echo $width ?>%">
+					<?php else: ?>
+						<div class="page" style="width:<?php echo $width ?>%; background-color:rgba(255, 255, 255, 0.09);">
+					<?php endif; ?>
 								<stamptext><?php echo category_title(); ?> (<?php echo category_count(); ?>)</stamptext>
 						</div>
 					</a>
