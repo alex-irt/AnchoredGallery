@@ -1,254 +1,171 @@
-/**
- *
- */
-
-h1 {
-	padding: 80px 0 40px;
-
-	font-size: 40px;
-	line-height: 48px;
-	color: #505762;
+.container:after {
+  content:"";
+  display:table;
+  clear:both;
 }
-	.search h1 {
-		padding: 60px 0;
-	}
 
-/* The slide-down panel at the very top of the page. Like literally. It's above the page, hidden. */
-.slidey {
-	overflow: hidden;
-	padding: 30px 0;
 
-	background: #f3f5f8;
-	border-bottom: 1px solid #e5e8ed;
+body {
+	background-color:#fff;
+	margin:0px 0px;
+	-webkit-font-smoothing: antialiased;
 }
-	.js-enabled .slidey {
-		-webkit-transition: margin-top .2s;
-		-moz-transition: margin-top .2s;
-		transition: margin-top .2s;
-	}
-	.slidey b, .slidey label {
-		display: block;
-		font-weight: 500;
-		padding-bottom: 15px;
 
-		font-size: 15px;
-		font-weight: 500;
-	}
-	.slidey form, .slidey aside {
-		float: left;
-		width: 50%;
-	}
-		.slidey form input {
-			padding: 20px;
-			width: 75%;
-		}
-	.slidey li {
-		list-style: none;
-	}
-		.slidey a {
-			display: block;
-			text-decoration: none;
-
-			color: #717985;
-		}
-			.slidey a:hover {
-				color: #414b59;
-			}
-		.slidey li span {
-			float: right;
-			opacity: .6;
-		}
-
-#top {
-	overflow: hidden;
-	padding: 20px 35px;
-
-	background: #fff;
-	border-bottom: 1px solid rgba(22,36,54,.1);
+a{
+	text-decoration:none;
+	color:#888;
 }
-	#top a {
-		float: left;
 
-		font-size: 13px;
-		font-weight: 500;
-		text-decoration: none;
+a:hover{color:#999;}
 
-		color: #8895a7;
-	}
-		#top #logo:hover, #top ul a:hover, #top ul .active a, .posts .items li:first-child h2 a:hover, p a:hover {
-			color: #4171b1;
-		}
-	#top ul {
-		list-style: none;
-		float: right;
-	}
-		#top ul li {
-			float: left;
-			padding-left: 40px;
-		}
-		#top ul a {
-			display: inline-block;
-			color: #555f6d;
-		}
-		#top ul img {
-			display: inline-block;
-			vertical-align: middle;
-
-			position: relative;
-			top: -2px;
-
-			width: 16px;
-			height: 16px;
-
-			opacity: .4;
-		}
-			#top ul a:hover img {
-				opacity: .7;
-			}
-			#top ul a.active img {
-				opacity: 1;
-			}
-
-/**
- *   Index page listing, category listing, search page results
- */
-.items {
-	list-style: none;
+.wrapper {
+	min-width: 600px;
+	max-width: 960px;
+	margin: 0px auto;
+	overflow:auto;
 }
-	.items > li {
-		padding: 70px 0 60px;
 
-		color: #97aec9;
-		background: #3c4552;
-	}
-		.posts .items > li:first-child {
-			background: #fff !important;
-			padding: 110px 0;
-		}
-			.items li h1 a, .posts .items > li:first-child h2 a {
-				color: #3d4551;
-			}
-	.items h1 {
-		padding: 0 0 8px;
-	}
-		.items h1 a {
-			text-decoration: none;
-		}
-	.items h2 {
-		font-size: 32px;
-		line-height: 41px;
-	}
-		.items h2 a {
-			display: block;
-			padding-bottom: 12px;
-
-			color: #fff;
-			color: rgba(176,200,236,.8);
-
-			text-decoration: none;
-		}
-			.items h2 a:hover {
-				color: #fff;
-			}
-	.items .content {
-		padding: 10px 0 0;
-	}
-		.items .content p {
-			padding-bottom: 15px;
-		}
-
-/**
- *   Pagination
- */
-.pagination {
-	overflow: hidden;
-	padding: 30px 0;
-	margin-bottom: 50px;
-
-	border-top: 1px solid rgba(22,36,54,.1);
-	border-bottom: 1px solid rgba(22,36,54,.1);
+.bg1{
+	background-color:#fff;
+	overflow:hidden;
+	float:left;
+	width:100%;
 }
-	.pagination:empty {
-		display: none;
-	}
-	.pagination a {
-		float: left;
-		text-decoration: none;
 
-		font-size: 13px;
-		font-weight: 500;
+.bg2{
+	background-color:#eee;
 
-		color: #6f7b8b;
-	}
-		.pagination a:hover {
-			color: #3c4857;
-		}
-	.pagination a.next {
-		float: right;
-	}
-
-/**
- *   Give some extra space to single-page wrappers
- */
-.content.wrap {
-	padding-bottom: 50px;
 }
-	.content.wrap ul, .content.wrap ol, .items li ul {
-		padding: 20px 30px;
-	}
-		.content.wrap ul ul, .content.wrap ol ol, .items li ul ul {
-			padding: 0 20px;
-		}
 
-/**
- *   Footnotes and straplines
- */
-.footnote, .commentlist time, .items footer {
-	display: block;
-	padding: 5px 0 15px;
+header{
+	width:100%;
+	text-align:center;
+	padding-top:40px;
+	padding-bottom:40px;
+	transition: all 0.1s;
+}
 
-	color: #98a2b1;
-	font-size: 14px;
-	font-style: italic;
+header:hover{
+box-shadow: 0 0 30px 0px #111;
+background-color:rgba(255, 255, 255, 0.1);
+}
+
+.pagewrapper{
+	overflow:auto;
+	width:auto;
+	height:auto;
+	margin: 10px 10px;
+	margin: 0px auto;
+}
+
+.page{
+	float:left;
+	padding:10px;
+	transition: all 0.1s;
+	width:160px;
+	text-align:center;
+}
+.page:hover{
+box-shadow: 0 0 30px 0px #111;
+background-color:rgba(255, 255, 255, 0.1);
+}
+
+#wrap{
+	margin: 0px auto;
+}
+
+img{
+	max-width: 100%;
+	height:auto;
+	float:left;
+}
+
+section{
+	float:left;
+}
+
+.column{
+	width:48%;
 	
-	white-space: nowrap;
 }
-	.footnote {
-		padding: 20px 0 40px;
-	}
 
-/**
- *   Comment form
- */
-ul.commentlist {
-	margin-bottom: 40px;
-
-	list-style: none;
-	border-top: 1px solid rgba(22,36,54,.1);
+.spacer{
+	width:2%;
+	height:10px;
 }
-	ul.commentlist .wrap {
-		position: relative;
-	}
-	ul.commentlist li {
-		padding: 40px 0;
-		border-bottom: 1px solid rgba(22,36,54,.1);
-	}
-		ul.commentlist time {
-			font-size: 13px;
-		}
-		ul.commentlist h2 {
-			font-size: 25px;
-			line-height: 33px;
-		}
-		ul.commentlist .counter {
-			position: absolute;
-			right: 0;
-			top: 0;
+.smallspace{
+	width:1%;
+	height:10px;
+}
 
-			font-size: 25px;
-			font-weight: 300;
-			color: #cdd2da;
-		}
+.yspace{
+	width: 100%;
+	height:20px;
+}
+
+
+.post{
+	background-color:#fff;
+	border: 1px solid #e8e8e8;
+	width:100%;
+	height:auto;
+	margin:25px 0px;
+	overflow:auto;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+#filler{
+	float:left;
+	width:100%;
+	overflow:auto;
+}
+
+.description {
+	float:left;
+	padding:30px;
+	padding-bottom:10px;
+}
+.datestamp {
+	float:left;
+	padding-left:20px;
+}
+
+.authorstamp {
+	float:right;
+	text-align:right;
+	padding-right:20px;
+}
+
+.footer{
+	text-align:center;
+	padding:20px;
+	
+}
+
+stamptext {
+font-family: helvetica, arial;
+font-size: 13pt;
+color: #e1e1e1;
+line-height: 120%;
+}
+
+bodytext {
+font-family: helvetica, arial;
+font-size: 13pt;
+color: #aaa;
+line-height: 120%;
+}
+
+titletext {
+font-family: lobster, arial;
+text-shadow: 1px 1px #000;
+font-size: 40px;
+color: #fff;
+line-height: 120%;
+}
+
 
 #comment {
 	overflow: hidden;
@@ -307,23 +224,8 @@ ul.commentlist {
 		#comment button:hover {
 			background: #3c6eb7;
 		}
-
-/**
- *   Footer
- */
-#bottom {
-	padding: 30px 0 40px;
+		
+.commentbox{
+	padding:20px;
+	
 }
-	#bottom ul {
-		float: right;
-		list-style: none;
-	}
-		#bottom li {
-			float: left;
-			padding-left: 35px;
-
-			font-size: 14px;
-		}
-		#bottom a {
-			text-decoration: none;
-		}

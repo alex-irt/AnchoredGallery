@@ -1,50 +1,112 @@
 <?php theme_include('header'); ?>
 
-<section class="content">
-
 	<?php if(has_posts()): ?>
-		<ul class="items">
-			<?php posts(); ?>
-			<li>
-				<article class="wrap">
-					<h1>
-						<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-					</h1>
-
-					<div class="content">
-						<?php echo article_markdown(); ?>
-					</div>
-
-					<footer>
-						Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time> by <?php echo article_author('real_name'); ?>.
-					</footer>
-				</article>
-			</li>
+	
+	<div class="bg2">
+	<article class="wrapper" >
+	<section class="smallspace" ></section>
+		<section class="column">
 			<?php $i = 0; while(posts()): ?>
-			<?php $bg = sprintf('background: hsl(215, 28%%, %d%%);', round(((++$i / posts_per_page()) * 20) + 20)); ?>
-			<li style="<?php echo $bg; ?>">
-				<article class="wrap">
-					<h2>
-						<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-					</h2>
-				</article>
-			</li>
+			<?php $i++; ?>
+			<?php if($i%2 != 0): ?>
+			
+				<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>">
+				<div class="post">
+				
+					<?php if(article_custom_field('image', '')!=""): ?>
+						<img src="<?php echo article_custom_field('image', ''); ?>" />
+					<?php else: ?>
+						<?php echo article_html(); ?>
+					<?php endif; ?>
+					
+					<?php if(article_description() !=""): ?>
+						<div id="filler">
+							<div class="description">
+								<bodytext>
+									<?php echo article_description(); ?>
+								</bodytext>
+							</div>
+						</div>
+					<?php endif; ?>
+					<section class="yspace" ></section>
+					<div class="datestamp">
+						<stamptext><?php echo article_date(); ?></stamptext>
+					</div>
+					<div class="authorstamp">
+						<stamptext><?php echo article_author(); ?></stamptext>
+					</div>
+					<section class="yspace" ></section>
+				</div>
+				</a>
+				
+			<?php endif; ?>
 			<?php endwhile; ?>
-		</ul>
-
+			
+		</section>
+		
+		<section class="spacer" ></section>
+		
+		<section class="column">
+		
+			<?php $i = 0; while(posts()): ?>
+			<?php $i++; ?>
+			<?php if($i%2 == 0): ?>
+			<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>">
+				<div class="post">
+				
+					<?php if(article_custom_field('image', '')!=""): ?>
+						<img src="<?php echo article_custom_field('image', ''); ?>" />
+					<?php else: ?>
+						<?php echo article_html(); ?>
+					<?php endif; ?>
+					
+					<?php if(article_description() !=""): ?>
+						<div id="filler">
+							<div class="description">
+								<bodytext>
+									<?php echo article_description(); ?>
+								</bodytext>
+							</div>
+						</div>
+					<?php endif; ?>
+					<section class="yspace" ></section>
+					<div class="datestamp">
+						<stamptext><?php echo article_date(); ?></stamptext>
+					</div>
+					<div class="authorstamp">
+						<stamptext><?php echo article_author(); ?></stamptext>
+					</div>
+					<section class="yspace" ></section>
+				</div>
+				</a>
+			<?php endif; ?>
+			<?php endwhile; ?>
+			
+		</section>
+		
 		<?php if(has_pagination()): ?>
-		<nav class="pagination">
-			<div class="wrap">
-				<?php echo posts_prev(); ?>
-				<?php echo posts_next(); ?>
+		<nav class="bg1">
+		<section class="yspace" ></section>
+			<div class="datestamp">
+				<stamptext><?php echo posts_prev(); ?></stamptext>
 			</div>
+			<div class="authorstamp">
+				<stamptext><?php echo posts_next(); ?></stamptext>
+			</div>
+			<section class="yspace" ></section>
 		</nav>
+		<section class="spacer" ></section>
 		<?php endif; ?>
+		
+		
+	</article>
+	</div>
+	
+		
 
 	<?php else: ?>
 		<p>Looks like you have some writing to do!</p>
 	<?php endif; ?>
 
-</section>
 
 <?php theme_include('footer'); ?>

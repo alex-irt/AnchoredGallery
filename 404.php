@@ -1,9 +1,24 @@
 <?php theme_include('header'); ?>
 
-	<section class="content wrap">
-		<h1>Page not found</h1>
 
-		<p>Unfortunately, the page <code>/<?php echo current_url(); ?></code> could not be found. Your best bet is either to try the <a href="<?php echo base_url(); ?>">homepage</a>, try <a href="#search">searching</a>, or go and cry in a corner (although I don’t recommend the latter).</p>
-	</section>
+<div class="bg2">
+	<article class="wrapper" >
+<div class="post">
+				
+						<img src="<?php echo theme_url($append = '/img/404.png'); ?>" />
+
+								<div class="description">
+									<bodytext>
+										Unfortunately this page doesn't exist. Try heading back to <a href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a>.
+									</bodytext>
+									<section class="yspace" ></section>
+								</div>
+							</div>
+					
+					
+				</div>
+</article>
+	</div>
+
 
 <?php theme_include('footer'); ?>

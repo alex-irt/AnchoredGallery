@@ -54,6 +54,83 @@ $out = preg_replace_callback(
 					</div>
 					<section class="yspace" ></section>
 				</div>
+				
+				
+				
+				<?php if(comments_open()): ?>
+				<div class="post">
+					<div id="filler">
+						<bodytext>
+							<form id="comment" class="commentform commentbox" method="post" action="<?php echo comment_form_url(); ?>#comment">
+								<?php echo comment_form_notifications(); ?>
+
+								<p class="name">
+									<label for="name">Your name:</label>
+									<?php echo comment_form_input_name('placeholder="Your name"'); ?>
+								</p>
+
+								<p class="email">
+									<label for="email">Your email address:</label>
+									<?php echo comment_form_input_email('placeholder="Your email (won’t be published)"'); ?>
+								</p>
+
+								<p class="textarea">
+									<label for="text">Your comment:</label>
+									<?php echo comment_form_input_text('placeholder="Your comment"'); ?>
+								</p>
+
+								<p class="submit">
+									<?php echo comment_form_button(); ?>
+								</p>
+							</form>
+						</bodytext>
+					</div>
+					
+				</div>
+				
+				
+				<?php if(has_comments()): ?>
+			
+				<?php $i = 0; while(comments()): $i++; ?>
+				
+				<div class="post">
+							
+					<div id="filler">
+						<div class="description">
+							<bodytext>
+								<h1><?php echo comment_name(); ?></h1>
+							</bodytext>
+									
+						</div>
+					</div>
+							
+					<div id="filler">
+						<div class="description">
+							<bodytext>
+								<?php echo comment_text(); ?>
+							</bodytext>
+						</div>
+					</div>
+							
+					<section class="yspace" ></section>
+							
+					<div class="datestamp">
+						<stamptext><?php echo relative_time(comment_time()); ?></stamptext>
+					</div>
+					
+					<div class="authorstamp">
+						<stamptext>Comment #<?php echo comment_id(); ?></stamptext>
+					</div>
+					
+					<section class="yspace" ></section>
+					
+				</div>
+				
+				<?php endwhile; ?>
+			
+			<?php endif; ?>
+				
+			<?php endif; ?>
 </article>
 	</div>
 
